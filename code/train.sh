@@ -1,0 +1,24 @@
+T=$(date +%F)
+python train_visdom.py \
+  --experiment_name $T \
+  --model deeplab \
+  --out_stride 16 \
+  --dataset_val dfc2020_val \
+  --train_with_dfc \
+  --data_dir_train /media/tortes/disk/dataset \
+  --data_dir_val /media/tortes/disk/dataset \
+  --log_dir /media/tortes/disk/dataset/logs \
+  --val_freq 10000 \
+  --save_freq 1000 \
+  --use_s2hr \
+  --lr 1e-4 \
+  --momentum 0.9 \
+  --weight_decay 5e-5 \
+  --batch_size 16 \
+  --workers 4 \
+  --seed 1861 \
+  --no_savanna \
+  --log_freq 10 \
+  --pretrained_backbone \
+  --max_epochs 100 \
+  --load_model /home/tortes/gittmp/dfc2020_baseline/code/10-15/checkpoint_step_84000.pth

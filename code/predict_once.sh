@@ -1,0 +1,9 @@
+python predict_once.py \
+  --config 10-11/args.pkl \
+  --checkpoint_file 10-11/checkpoint_step_10000.pth \
+  --dataset 'tiff_dir' \
+  --data_dir /home/tortes/Downloads/drive-download-20200930T074255Z-001/result \
+  --out_dir /media/tortes/disk/dataset/predict \
+  --preview_dir /media/tortes/disk/dataset/predict \
+  --batch_size 16 \
+  # --validation_folder /media/tortes/disk/dataset/ROIs0000_validation/dfc_validation
